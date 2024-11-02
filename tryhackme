@@ -1,0 +1,73 @@
+  ~ OWASP Top 10 Report
+
+  ~  Overview  ~
+
+The OWASP Top 10 is a list of the most critical web application security risks. Understanding these risks helps developers, security professionals, and organizations secure their applications against common vulnerabilities.
+
+TryHackMe provides practical labs and exercises to help users understand and mitigate each risk, simulating real-world attacks and remediation techniques.
+
+
+
+    ~ OWASP Top 10 Vulnerabilities ~
+
+1.   ~  ~Injection (A01:2021)  ~  
+     ~Description  ~  ~: Injection flaws, such as SQL, NoSQL, and OS command injection, occur when untrusted data is sent to an interpreter as part of a command or query.
+     ~Example  ~  ~: SQL Injection, where attackers can manipulate database queries to gain unauthorized access.
+     ~Mitigation  ~  ~: Use parameterized queries, prepared statements, and proper validation.
+     ~TryHackMe Exercises  ~  ~: The   ~SQL Injection  ~ room demonstrates how to identify and exploit SQLi vulnerabilities and how to secure applications.
+
+2.    ~Broken Authentication (A02:2021)  ~  
+    ~Description  ~  ~: Insecure authentication allows attackers to compromise passwords, session tokens, or keys to assume other users' identities.
+    ~Example  ~  ~: Brute-forcing weak passwords to access user accounts.
+    ~Mitigation  ~  ~: Implement strong password policies, use multi-factor authentication, and limit login attempts.
+  ~TryHackMe Exercises  ~  ~: The   ~Authentication  ~ room covers the importance of secure authentication mechanisms.
+
+3.   ~Sensitive Data Exposure (A03:2021)  ~  
+     ~Description  ~  ~: Sensitive data exposure occurs when applications do not adequately protect sensitive information.
+     ~Example  ~  ~: Exposing personal or financial data through unencrypted connections.
+    ~Mitigation  ~  ~: Use strong encryption (TLS) and secure storage practices.
+     ~TryHackMe Exercises  ~  ~: The   ~OWASP Top 10  ~ room has tasks focusing on how sensitive data might be exposed.
+
+4.    ~XML External Entities (XXE) (A04:2021)  ~ 
+     ~Description  ~  ~: XXE flaws occur when XML parsers allow external entity references, leading to data exposure or remote code execution.
+     ~Example  ~  ~: Exploiting XML parsers to read files on a server.
+     ~Mitigation  ~  ~: Disable external entity processing in XML parsers, use less risky data formats.
+     ~TryHackMe Exercises  ~  ~: The   ~XXE  ~ room shows examples and mitigation steps for XXE vulnerabilities.
+
+5.   ~  ~Broken Access Control (A05:2021)  ~ 
+     ~Description  ~  ~: Inadequate access controls let unauthorized users access restricted data or functions.
+     ~Example  ~  ~: Elevating privileges to access restricted areas of an application.
+    ~Mitigation  ~  ~: Enforce role-based access control (RBAC), restrict administrative functions.
+     ~TryHackMe Exercises  ~  ~: The   ~Access Control  ~ room demonstrates practical examples of bypassing weak access controls.
+
+6  ~Security Misconfiguration (A06:2021)  ~ 
+ ~Description  ~  ~: Security misconfiguration occurs when security settings are left at insecure defaults.
+  ~Example  ~  ~: Default accounts and passwords on systems.
+  ~Mitigation  ~  ~: Regularly update and review configurations, remove unnecessary services.
+    ~TryHackMe Exercises  ~  ~: The   ~Basic Pentesting  ~ room covers finding and exploiting misconfigurations.
+
+7.     ~Cross-Site Scripting (XSS) (A07:2021)  ~  
+       ~Description  ~  ~: XSS flaws occur when untrusted data is included in web pages without proper validation.
+       ~Example  ~  ~: Injecting JavaScript into a page to steal cookies or perform actions on behalf of the user.
+       ~Mitigation  ~  ~: Use output encoding, input validation, and content security policies (CSP).
+      ~TryHackMe Exercises  ~  ~: The   ~Cross-Site Scripting (XSS)  ~ room shows how to exploit XSS and prevent it.
+
+8.     ~Insecure Deserialization (A08:2021)  ~  
+       ~Description  ~  ~: Insecure deserialization can lead to remote code execution if untrusted data is deserialized.
+        ~Example  ~  ~: Sending malicious serialized data to a web application.
+        ~Mitigation  ~  ~: Avoid deserializing untrusted data, implement integrity checks.
+        ~TryHackMe Exercises  ~  ~: The   ~Serialization  ~ room illustrates the dangers of insecure deserialization.
+
+9.      ~ Using Components with Known Vulnerabilities (A09:2021)  ~  
+        ~Description  ~  ~: Applications relying on vulnerable components risk being compromised.
+        ~Example  ~  ~: Using outdated libraries with known exploits.
+        ~Mitigation  ~  ~: Regularly update dependencies, monitor for known vulnerabilities.
+       ~TryHackMe Exercises  ~  ~: The   ~Vulnerable Software  ~ room covers identifying and mitigating component vulnerabilities.
+
+10.    ~Insufficient Logging and Monitoring (A10:2021)  ~ 
+       ~Description  ~  ~: Without logging and monitoring, attacks go undetected, impacting the response to breaches.
+       ~Example  ~  ~: Missing audit logs allow attackers to stay undetected.
+       ~Mitigation  ~  ~: Implement logging and alerting systems, monitor logs actively.
+       ~TryHackMe Exercises  ~  ~: The   ~Monitoring and Logging  ~ room offers insights into identifying issues through logs.
+
+---
